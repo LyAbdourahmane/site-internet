@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdourahamane LY - Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      function toggleDetails(id) {
+        const element = document.getElementById(id);
+        if (element.classList.contains("hidden")) {
+          element.classList.remove("hidden");
+          element.classList.add("fade-in");
+        } else {
+          element.classList.add("hidden");
+          element.classList.remove("fade-in");
+        }
+      }
+    </script>
+    <style>
+      .fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <header class="bg-blue-900 text-white shadow sticky top-0 z-50">
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold">Abdourahamane LY</h1>
+        <nav>
+          <ul class="flex space-x-6 font-medium">
+            <li><a href="#about" class="hover:text-blue-300">À propos</a></li>
+            <li>
+              <a href="#education" class="hover:text-blue-300"
+                >Études &amp; formation</a
+              >
+            </li>
+            <li><a href="#projects" class="hover:text-blue-300">Projets</a></li>
+            <li><a href="#cv" class="hover:text-blue-300">CV</a></li>
+            <li><a href="#contact" class="hover:text-blue-300">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="about" class="py-16 bg-white text-center">
+      <img
+        src="fichiers/photo_profil.jpg"
+        alt="Photo de Abdourahamane LY"
+        class="mx-auto w-32 h-32 rounded-full mb-4 shadow"
+      />
+      <h2 class="text-3xl font-semibold text-blue-800">
+        Étudiant en Data Science
+      </h2>
+      <p class="mt-4 text-lg max-w-xl mx-auto text-gray-600">
+        Formé chez OpenClassrooms (RNCP Niveau 7), je me spécialise en Machine
+        Learning. Je recherche une alternance dès novembre 2025 ou janvier 2026.
+      </p>
+      <!-- Bio Section -->
+      <section class="py-12 bg-gray-100" id="bio">
+        <div class="max-w-4xl mx-auto px-6">
+          <h3 class="text-2xl font-bold mb-4 text-blue-700">Mon parcours</h3>
+          <p class="text-gray-700 leading-relaxed">
+            Depuis mon enfance, j'ai nourri un intérêt profond pour les matières
+            scientifiques...
+            <button
+              onclick="toggleDetails('bioDetails')"
+              class="text-blue-600 underline"
+            >
+              Voir plus
+            </button>
+          </p>
+          <div
+            id="bioDetails"
+            class="hidden mt-4 text-gray-700 leading-relaxed"
+          >
+            <p>
+              À l'école primaire, je passais des heures à lire des livres sur
+              l'aviation et à regarder des documentaires sur les avions et les
+              pilotes de ligne. Cette passion pour les sciences m'a poussé à
+              exceller dans des matières comme les mathématiques, la physique et
+              la chimie, qui sont essentielles pour une carrière dans
+              l'aviation.
+            </p>
+            <p class="mt-2">
+              Cependant, en grandissant et en arrivant au lycée, mes aspirations
+              ont évolué en fonction des réalités et des opportunités qui se
+              sont présentées à moi. J'ai choisi de me spécialiser en
+              mathématiques, physique et chimie pour garder toutes mes options
+              ouvertes pour une carrière scientifique. Durant cette période,
+              j'ai découvert que devenir pilote nécessitait d'importants moyens
+              financiers, ce qui m’a contraint à revoir mes plans.
+            </p>
+            <p class="mt-2">
+              En Terminale, j’ai envisagé de rejoindre l’armée française en tant
+              que médecin via un concours, mais une hospitalisation m’a empêché
+              d’y participer. Après mon bac, j’ai été orienté en chimie à
+              l’université en Guinée, une filière que j’ai suivie par défaut
+              faute d’alternatives privées accessibles.
+            </p>
+            <p class="mt-2">
+              Plus tard, passionné d’électronique et autodidacte en réparation
+              de téléphones, j’ai découvert la data science sur YouTube et elle
+              est rapidement devenue ma vocation. Aujourd’hui, je me forme en
+              Data Science chez OpenClassrooms et je recherche une alternance en
+              Machine Learning Engineer.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Education Section -->
+      <section id="education" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+          <h3 class="text-3xl font-bold text-blue-800 mb-10 text-center">
+            Études & formation
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Item 1 -->
+            <div
+              class="bg-gray-100 p-6 rounded-2xl shadow hover:shadow-lg transition"
+            >
+              <div class="text-sm text-blue-600 font-semibold mb-2">
+                Début NOVEMBRE 2025 en Alternance
+              </div>
+              <h4 class="text-xl font-semibold text-gray-800">
+                Formation Machine Learning Engineer (RNCP Niveau 7 - BAC + 5)
+              </h4>
+              <p class="mt-1 text-gray-600">DataScientest, France</p>
+            </div>
+
+            <!-- Item 2 -->
+            <div
+              class="bg-gray-100 p-6 rounded-2xl shadow hover:shadow-lg transition"
+            >
+              <div class="text-sm text-blue-600 font-semibold mb-2">2025</div>
+              <h4 class="text-xl font-semibold text-gray-800">
+                Formation Data Scientist (RNCP Niveau 7)
+              </h4>
+              <p class="mt-1 text-gray-600">OpenClassrooms, France</p>
+            </div>
+
+            <!-- Item 3 -->
+            <div
+              class="bg-gray-100 p-6 rounded-2xl shadow hover:shadow-lg transition"
+            >
+              <div class="text-sm text-blue-600 font-semibold mb-2">
+                2020 – 2024
+              </div>
+              <h4 class="text-xl font-semibold text-gray-800">
+                Licence en Chimie
+              </h4>
+              <p class="mt-1 text-gray-600">
+                Université de Bordeaux - Université Gamal Abdel Nasser de
+                Conakry
+              </p>
+            </div>
+
+            <!-- Item 4 (optionnel) -->
+            <div
+              class="bg-gray-100 p-6 rounded-2xl shadow hover:shadow-lg transition"
+            >
+              <div class="text-sm text-blue-600 font-semibold mb-2">
+                2020 – 2022
+              </div>
+              <h4 class="text-xl font-semibold text-gray-800">
+                Licence en Génie Informatique
+              </h4>
+              <p class="mt-1 text-gray-600">
+                Université Gamal Abdel Nasser de Conakry
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="py-16 bg-white" id="projects">
+        <div class="max-w-6xl mx-auto px-6">
+          <h3 class="text-3xl font-bold mb-10 text-center text-blue-800">
+            Mes projets
+          </h3>
+          <!-- Projet 1 -->
+          <div
+            class="mb-10 p-6 bg-gray-100 rounded-2xl shadow hover:shadow-lg transition"
+          >
+            <h4 class="text-xl font-semibold text-blue-700">
+              Mur d’images & gestion de sessions – Node.js / PostgreSQL
+            </h4>
+            <p class="text-gray-700 mt-2">
+              Dans le cadre de ma formation en Data Science, j’ai développé un
+              serveur HTTP complet en Node.js, sans framework, pour gérer un mur
+              d’images avec authentification, likes et commentaires.
+            </p>
+            <button
+              onclick="toggleDetails('p4')"
+              class="mt-3 text-blue-600 underline"
+            >
+              Voir les détails
+            </button>
+            <div id="p4" class="hidden mt-4 fade-in text-gray-700 space-y-4">
+              <h5 class="font-semibold text-blue-700">OBJECTIF DU PROJET</h5>
+              <p>Concevoir un service web léger capable de :</p>
+
+              <ul class="list-disc pl-5">
+                <li>Servir des fichiers statiques (CSS, JS, images)</li>
+                <li>Afficher un mur d’images dynamique</li>
+                <li>Gérer les sessions utilisateur par cookies</li>
+                <li>Ajouter des likes et des commentaires</li>
+                <li>
+                  Authentifier les utilisateurs avec inscription et connexion
+                  sécurisées
+                </li>
+              </ul>
+
+              <h5 class="font-semibold text-blue-700">CE QUE J'AI RÉALISÉ</h5>
+              <ul class="list-disc pl-5">
+                <li>Création d’un serveur HTTP natif (module http)</li>
+                <li>Gestion manuelle des sessions en mémoire et via cookies</li>
+                <li>
+                  Intégration de PostgreSQL pour stocker comptes, images, likes
+                  et commentaires
+                </li>
+                <li>
+                  Implémentation des routes : mur, page individuelle, like,
+                  signup/signin, signout
+                </li>
+                <li>
+                  Sécurisation des mots de passe avec crypto (salage + hachage
+                  SHA-256)
+                </li>
+                <li>
+                  Rendu HTML dynamique directement dans le serveur (pas de
+                  moteur de template)
+                </li>
+              </ul>
+
+              <h5 class="font-semibold text-blue-700">OUTILS ET TECHNIQUES</h5>
+              <ul class="list-disc pl-5">
+                <li>Node.js (http, fs, crypto)</li>
+                <li>PostgreSQL (node-postgres)</li>
+                <li>JavaScript asynchrone (async/await)</li>
+                <li>Tailwind CSS pour le style frontend</li>
+                <li>Gestion de sessions et cookies HTTP</li>
+              </ul>
+
+              <h5 class="font-semibold text-blue-700">
+                COMPÉTENCES MOBILISÉES
+              </h5>
+              <ul class="list-disc pl-5">
+                <li>Conception de serveurs web sans framework</li>
+                <li>Modélisation et requêtage SQL</li>
+                <li>Sécurisation des flux et authentification</li>
+                <li>Développement backend JavaScript & gestion d’état</li>
+                <li>Communication client–serveur et rendu dynamique</li>
+              </ul>
+
+              <a
+                href="fichiers/server.zip"
+                class="inline-block mt-2 text-blue-700 underline"
+                >📥 Télécharger le code</a
+              >
+            </div>
+          </div>
+
+          <!-- Projet 2 -->
+          <div
+            class="mb-10 p-6 bg-gray-100 rounded-2xl shadow hover:shadow-lg transition"
+          >
+            <h4 class="text-xl font-semibold text-blue-700">
+              Nettoyage & Exploration des données Open Food Facts
+            </h4>
+            <p class="text-gray-700 mt-2">
+              Dans le cadre de ma formation en Data Science chez OpenClassrooms,
+              j’ai travaillé sur un projet réel proposé par Santé Publique
+              France. L’objectif était d’améliorer la qualité de la base de
+              données Open Food Facts, en préparant les données à un futur
+              système de suggestion automatique de valeurs pour les champs
+              manquants lors de l’ajout d’un nouveau produit.
+            </p>
+            <button
+              onclick="toggleDetails('p1')"
+              class="mt-3 text-blue-600 underline"
+            >
+              Voir les détails
+            </button>
+            <div id="p1" class="hidden mt-4 fade-in text-gray-700 space-y-4">
+              <h5 class="font-semibold text-blue-700">OBJECTIF DU PROJET</h5>
+              <p>
+                Étudier la faisabilité d’un système de suggestion automatique de
+                champs dans Open Food Facts via une phase complète de nettoyage,
+                d’exploration et de visualisation des données.
+              </p>
+
+              <h5 class="font-semibold text-blue-700">CE QUE J'AI RÉALISÉ</h5>
+              <ul class="list-disc pl-5">
+                <li>
+                  Prétraitement du jeu (300 000+ produits) : chargement,
+                  formatage, suppression des doublons.
+                </li>
+                <li>
+                  Sélection de variables pertinentes (taux de remplissage > 50
+                  %, corrélations métier).
+                </li>
+                <li>
+                  Traitement des valeurs aberrantes via boxplots, scatterplots
+                  et méthodes statistiques (écarts interquartiles).
+                </li>
+                <li>
+                  Imputation des manquantes selon nature : moyennes, médianes,
+                  règles métiers.
+                </li>
+                <li>
+                  Analyses univariées et bivariées pour explorer distributions
+                  et relations.
+                </li>
+                <li>
+                  Analyse multivariée (ACP) pour réduire la dimensionnalité et
+                  révéler corrélations.
+                </li>
+              </ul>
+
+              <h5 class="font-semibold text-blue-700">
+                VISUALISATION DES DONNÉES
+              </h5>
+              <p>
+                Création de graphiques clairs avec Matplotlib et Seaborn,
+                adaptés à un public non-expert (clients, décideurs,
+                partenaires).
+              </p>
+
+              <h5 class="font-semibold text-blue-700">RESPECT DU RGPD</h5>
+              <p>
+                Présentation des mesures de conformité aux 5 principes du RGPD :
+                licéité, minimisation, exactitude, sécurité et durée limitée,
+                même en l’absence de données personnelles.
+              </p>
+
+              <h5 class="font-semibold text-blue-700">
+                COMPÉTENCES MOBILISÉES
+              </h5>
+              <ul class="list-disc pl-5">
+                <li>Python (pandas, NumPy, Matplotlib, Seaborn)</li>
+                <li>Analyse statistique et visualisation</li>
+                <li>Traitement des valeurs manquantes et aberrantes</li>
+                <li>Automatisation des traitements</li>
+                <li>
+                  Rigueur dans la préparation d’un dataset propre et stable
+                </li>
+              </ul>
+
+              <h5 class="font-semibold text-blue-700">CONCLUSION</h5>
+              <p>
+                Ce projet a confirmé la faisabilité technique d’un outil
+                d’auto-complétion pour Open Food Facts, en s’appuyant sur des
+                données fiables, nettoyées et bien structurées.
+              </p>
+
+              <a
+                href="fichiers/santé_public.zip"
+                class="inline-block mt-2 text-blue-700 underline"
+                >📥 Télécharger le code</a
+              >
+            </div>
+          </div>
+
+          <!-- Projet 3 -->
+          <div
+            class="mb-10 p-6 bg-gray-100 rounded-2xl shadow hover:shadow-lg transition"
+          >
+            <h4 class="text-xl font-semibold text-blue-700">
+              Prédiction consommation énergétique – Ville de Seattle
+            </h4>
+            <p class="text-gray-700 mt-2">
+              Ce projet s’inscrit dans le cadre de ma formation en Data Science
+              (RNCP niveau 7) chez OpenClassrooms. J’ai été missionné pour aider
+              la ville de Seattle à réduire ses émissions de carbone d’ici 2050
+              en prédisant la consommation énergétique et les émissions de CO₂
+              de bâtiments non résidentiels à partir de données structurelles.
+            </p>
+            <button
+              onclick="toggleDetails('p2')"
+              class="mt-3 text-blue-600 underline"
+            >
+              Voir les détails
+            </button>
+            <div id="p2" class="hidden mt-4 fade-in text-gray-700 space-y-4">
+              <h5 class="font-semibold text-blue-700">OBJECTIF DU PROJET</h5>
+              <p>
+                À partir de relevés 2016 (superficie, usage, année de
+                construction, adresse, types d’énergie…), j’ai conçu un modèle
+                prédictif pour estimer la consommation d’énergie et les
+                émissions de CO₂ des nouveaux bâtiments, tout en évaluant le
+                rôle du score ENERGY STAR.
+              </p>
+
+              <h5 class="font-semibold text-blue-700">CE QUE J'AI RÉALISÉ</h5>
+              <ul class="list-disc pl-5">
+                <li>
+                  Nettoyage et exploration des données : traitement des valeurs
+                  manquantes, doublons et variables qualitatives.
+                </li>
+                <li>
+                  Ingénierie des features : extraction d’infos depuis les
+                  adresses, transformations log, normalisation, encodage
+                  catégoriel.
+                </li>
+                <li>
+                  Analyse exploratoire : distributions, corrélations, boxplots
+                  et scatterplots pour révéler les relations clés.
+                </li>
+                <li>
+                  Modélisation prédictive : régression linéaire, arbre de
+                  décision, random forest, gradient boosting.
+                </li>
+                <li>
+                  Évaluation rigoureuse : RMSE, MAE, R², validation croisée et
+                  tuning via GridSearchCV.
+                </li>
+                <li>
+                  Comparaison des performances avec et sans le score ENERGY STAR
+                  pour en mesurer l’utilité.
+                </li>
+              </ul>
+
+              <h5 class="font-semibold text-blue-700">OUTILS ET TECHNIQUES</h5>
+              <ul class="list-disc pl-5">
+                <li>
+                  Python (pandas, NumPy, scikit-learn, Matplotlib, Seaborn)
+                </li>
+                <li>
+                  Régressions linéaires et modèles d’ensemble (RandomForest,
+                  GradientBoosting)
+                </li>
+                <li>Validation croisée et GridSearchCV</li>
+                <li>Feature engineering avancé et transformations variables</li>
+              </ul>
+
+              <h5 class="font-semibold text-blue-700">RÉSULTATS</h5>
+              <p>
+                Mise en évidence que certaines variables structurelles (taille,
+                usage, année) prédisent efficacement les émissions de CO₂. Le
+                score ENERGY STAR apporte un gain de performance, mais peut
+                parfois être remplacé par des combinaisons de variables plus
+                accessibles.
+              </p>
+
+              <h5 class="font-semibold text-blue-700">
+                COMPÉTENCES MOBILISÉES
+              </h5>
+              <ul class="list-disc pl-5">
+                <li>Préparation de données pour la modélisation</li>
+                <li>Régression et évaluation de modèles</li>
+                <li>Feature engineering</li>
+                <li>Analyse de performances et optimisation</li>
+                <li>Esprit critique sur l’usage des variables</li>
+              </ul>
+
+              <a
+                href="fichiers/Prediction_batiment.zip"
+                class="inline-block mt-2 text-blue-700 underline"
+                >📥 Télécharger le code</a
+              >
+            </div>
+          </div>
+
+          <!-- Projet 4 -->
+          <div
+            class="mb-10 p-6 bg-gray-100 rounded-2xl shadow hover:shadow-lg transition"
+          >
+            <h4 class="text-xl font-semibold text-blue-700">
+              Segmentation client e-commerce (Olist)
+            </h4>
+            <p class="text-gray-700 mt-2">
+              Dans le cadre de ma formation en Data Science chez OpenClassrooms,
+              j’ai été missionné pour réaliser une segmentation des clients
+              d’Olist, une entreprise de e-commerce brésilienne. L’objectif
+              était de proposer une segmentation utile et exploitable par
+              l’équipe marketing afin de mieux cibler les campagnes et évaluer
+              la satisfaction client.
+            </p>
+            <button
+              onclick="toggleDetails('p3')"
+              class="mt-3 text-blue-600 underline"
+            >
+              Voir les détails
+            </button>
+            <div id="p3" class="hidden mt-4 fade-in text-gray-700 space-y-4">
+              <h5 class="font-semibold text-blue-700">OBJECTIF DU PROJET</h5>
+              <p>
+                À partir d’un jeu de données transactionnel (commandes,
+                satisfaction, fréquence…), j’ai développé un système de
+                clustering client permettant de distinguer les clients selon
+                leur comportement d’achat et leur niveau de satisfaction. Une
+                attention particulière a été portée à la qualité métier des
+                segments, pour garantir leur réutilisabilité par l’entreprise.
+              </p>
+
+              <h5 class="font-semibold text-blue-700">CE QUE J'AI RÉALISÉ</h5>
+              <ul class="list-disc pl-5">
+                <li>
+                  Requêtes SQL pour agréger les données clients à partir de
+                  plusieurs tables relationnelles.
+                </li>
+                <li>
+                  Construction d’indicateurs comportementaux : scores RFM
+                  (Récence, Fréquence, Montant), taux de satisfaction, délai de
+                  livraison.
+                </li>
+                <li>
+                  Prétraitement et transformation : normalisation, encodage,
+                  analyse des distributions.
+                </li>
+                <li>
+                  Application de plusieurs algorithmes de clustering : K-Means,
+                  avec choix du nombre de clusters via le coefficient de
+                  silhouette et la pertinence métier.
+                </li>
+                <li>
+                  Caractérisation des clusters : profils distincts de clients
+                  VIP, réguliers satisfaits, irréguliers à fort potentiel,
+                  anciens inactifs, clients insatisfaits.
+                </li>
+                <li>
+                  Étude de la stabilité dans le temps : simulation de
+                  ré-entraînements, mesure d’ARI pour définir la fréquence
+                  optimale de mise à jour.
+                </li>
+                <li>
+                  Recommandation finale : nombre optimal de segments,
+                  interprétation métier, fréquence de mise à jour et protocole
+                  de maintenance du modèle.
+                </li>
+              </ul>
+
+              <h5 class="font-semibold text-blue-700">Résultats</h5>
+              <p>
+                Identification de 5 segments de clients aux comportements
+                différenciés, rendus exploitables pour des campagnes marketing
+                ciblées et des relances personnalisées.
+              </p>
+
+              <h5 class="font-semibold text-blue-700">OUTILS ET TECHNIQUES</h5>
+              <ul class="list-disc pl-5">
+                <li>SQL (MySQL / DBeaver)</li>
+                <li>
+                  Python (pandas, NumPy, scikit-learn, Seaborn, Matplotlib)
+                </li>
+                <li>
+                  Clustering (K-Means), ARI, coefficient de silhouette, KS
+                </li>
+                <li>
+                  Analyse RFM, transformation log, standardisation, encodage
+                </li>
+              </ul>
+
+              <h5 class="font-semibold text-blue-700">
+                COMPÉTENCES MOBILISÉES
+              </h5>
+              <ul class="list-disc pl-5">
+                <li>Exploration de données transactionnelles</li>
+                <li>Analyse RFM et satisfaction client</li>
+                <li>Clustering non supervisé & évaluation métier</li>
+                <li>SQL avancé (jointures, agrégations)</li>
+                <li>
+                  Stabilité temporelle des modèles & maintenance de modèle
+                </li>
+              </ul>
+
+              <a
+                href="fichiers/RFM_OLIST.zip"
+                class="inline-block mt-2 text-blue-700 underline"
+                >📥 Télécharger le code</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CV Section -->
+      <section id="cv" class="py-12 bg-gray-100 text-center">
+        <h3 class="text-2xl font-bold text-blue-800">📄 Mon CV</h3>
+        <a
+          href="fichiers/cv_bon.pdf"
+          download
+          class="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded shadow hover:bg-blue-700 transition"
+          >Télécharger le CV</a
+        >
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-12 bg-white text-center">
+        <h3 class="text-2xl font-bold text-blue-800 mb-2">📬 Me contacter</h3>
+        <p class="text-gray-700">📧 lyabdourahamane66@gmail.com</p>
+        <p class="text-gray-700">📧 ly.abdourahamane.2024@gmail.com</p>
+        <p class="text-gray-700">☎️ (+33) 06 95 93 40 91</p>
+      </section>
+      <footer class="bg-blue-900 text-white py-8">
+        <div
+          class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-sm">© 2025 Abdourahamane LY. Tous droits réservés.</p>
+          <div class="flex space-x-4 mt-4 md:mt-0">
+            <a
+              href="https://www.linkedin.com/in/abdourahamane-ly-ab322a35b/"
+              class="hover:text-blue-300"
+              >LinkedIn</a
+            >
+            <a
+              href="https://github.com/LyAbdourahmane"
+              class="hover:text-blue-300"
+              >GitHub</a
+            >
+            <a
+              href="https://www.facebook.com/abdourahmane.ly.3517"
+              class="hover:text-blue-300"
+              >Facebook</a
+            >
+            <a
+              href="https://www.instagram.com/abdourahmane.ly.3517?igsh=amhoOWk3Z2M4aDE2"
+              class="hover:text-blue-300"
+              >Instagram</a
+            >
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>
